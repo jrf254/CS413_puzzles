@@ -1,0 +1,10 @@
+- Player Movement
+- Item detection
+- Text display
+- Game start screen
+- Game over screen
+
+
+
+- Art Assets
+	- Items
