@@ -1,8 +1,12 @@
 - Player Movement
 - Item detection
 - Text display
-- Game start screen
+- Game title screen
 - Game over screen
+- Menu
+	- Start Game
+	- Credits 
+	- Instructions/Tutorial
 
 
 
