@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with TexturePacker http://www.codeandweb.com/texturepacker-->
+<!-- $TexturePacker:SmartUpdate:74d8a7add85a0bac5ac9e45dcffc8513:1cee70215dc70def82e064a26aae7277:6d6f4a5fde0366c31e6167774522485d$ -->
+<TextureAtlas imagePath="spriteshseet..png">
+    <SubTexture name="PC3a" x="1156" y="873" width="27" height="22" frameX="-3" frameY="-5" frameWidth="32" frameHeight="32"/>
+    <SubTexture name="PC3b" x="1156" y="897" width="27" height="22" frameX="-3" frameY="-5" frameWidth="32" frameHeight="32"/>
+    <SubTexture name="PC3c" x="1156" y="921" width="27" height="22" frameX="-3" frameY="-5" frameWidth="32" frameHeight="32"/>
+    <SubTexture name="PC3d" x="1156" y="945" width="27" height="22" frameX="-3" frameY="-5" frameWidth="32" frameHeight="32"/>
+    <SubTexture name="PC3e" x="1156" y="969" width="27" height="22" frameX="-3" frameY="-5" frameWidth="32" frameHeight="32"/>
+    <SubTexture name="discoclub" x="1156" y="1166" width="650" height="650"/>
+    <SubTexture name="discoclub2" x="2" y="2" width="1196" height="869"/>
+    <SubTexture name="loading" x="1200" y="2" width="581" height="580"/>
+    <SubTexture name="menu" x="1200" y="584" width="581" height="580"/>
+    <SubTexture name="walls" x="2" y="873" width="1152" height="800" frameX="-22" frameY="-13" frameWidth="1196" frameHeight="869"/>
+</TextureAtlas>
