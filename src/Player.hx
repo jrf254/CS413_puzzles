@@ -64,7 +64,23 @@ class Player extends Image{
 	
 	public function enterFrame(event:EnterFrameEvent) {
 		
-		if (leftPress) {
+		if (downPress && rightPress){
+			rotation = 2.25;
+			y = y + 1.5;
+			x = x + 1.5;
+		} else if (downPress && leftPress){
+			rotation = .75;
+			y = y + 1.5;
+			x = x - 1.5;
+		} else if (upPress && rightPress){
+			rotation = .75;
+			y = y - 1.5;
+			x = x + 1.5;
+		} else if (upPress && leftPress){
+			rotation = 2.25;
+			y = y - 1.5;
+			x = x - 1.5;
+		} else if(leftPress) {
 			rotation = 1.5;
 			x = x - 2;
 			
@@ -79,6 +95,6 @@ class Player extends Image{
 		} else if (downPress){
 			rotation = 0;
 			y = y + 2;
-		}
+		} 
 	}
 }

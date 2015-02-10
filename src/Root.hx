@@ -23,14 +23,8 @@ class Root extends Sprite {
 
         assets = new AssetManager();
 		
-        assets.enqueue("assets/walls.png");
-        assets.enqueue("assets/discoclub2.png");
-        assets.enqueue("assets/PC3a.png");
-		assets.enqueue("assets/PC3b.png");
-		assets.enqueue("assets/PC3c.png");
-		assets.enqueue("assets/PC3d.png");
-		assets.enqueue("assets/PC3e.png");
-		assets.enqueue("assets/menu.png");
+		assets.enqueue("assets/spritesheet.png");
+		assets.enqueue("assets/spritesheet.xml");
 		
         assets.loadQueue(function onProgress(ratio:Float) {
             haxe.Log.clear();
