@@ -1,18 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Created with TexturePacker http://www.codeandweb.com/texturepacker-->
-<!-- $TexturePacker:SmartUpdate:5ed4a2e85ad3b07c956be2839bf6af21:575c25a09bfd5343fd16ffed9cccd097:ef7663426bf705b25566a93aef3a1571$ -->
+<!-- $TexturePacker:SmartUpdate:faf9f61d4f99507b7de53f38f2e0cd46:403a6a80008b4d5cc1b13fe0a2e89be6:ef7663426bf705b25566a93aef3a1571$ -->
 <TextureAtlas imagePath="spritesheet.png">
     <SubTexture name="PC3a" x="1156" y="873" width="27" height="22" frameX="-3" frameY="-5" frameWidth="32" frameHeight="32"/>
     <SubTexture name="PC3b" x="1156" y="897" width="27" height="22" frameX="-3" frameY="-5" frameWidth="32" frameHeight="32"/>
     <SubTexture name="PC3c" x="1156" y="921" width="27" height="22" frameX="-3" frameY="-5" frameWidth="32" frameHeight="32"/>
     <SubTexture name="PC3d" x="1156" y="945" width="27" height="22" frameX="-3" frameY="-5" frameWidth="32" frameHeight="32"/>
     <SubTexture name="PC3e" x="1156" y="969" width="27" height="22" frameX="-3" frameY="-5" frameWidth="32" frameHeight="32"/>
-    <SubTexture name="cbutton" x="2" y="1675" width="382" height="71" frameX="-10" frameY="-1" frameWidth="400" frameHeight="75"/>
-    <SubTexture name="discoclub" x="1156" y="1166" width="650" height="650"/>
+    <SubTexture name="cbutton" x="1156" y="1166" width="382" height="71" frameX="-10" frameY="-1" frameWidth="400" frameHeight="75"/>
     <SubTexture name="discoclub2" x="2" y="2" width="1196" height="869"/>
-    <SubTexture name="ibutton" x="386" y="1675" width="382" height="71" frameX="-10" frameY="-1" frameWidth="400" frameHeight="75"/>
+    <SubTexture name="ibutton" x="1156" y="1239" width="382" height="71" frameX="-10" frameY="-1" frameWidth="400" frameHeight="75"/>
     <SubTexture name="loading" x="1200" y="2" width="581" height="580"/>
     <SubTexture name="menu" x="1200" y="584" width="581" height="580"/>
-    <SubTexture name="pgbutton" x="770" y="1675" width="382" height="71" frameX="-10" frameY="-1" frameWidth="400" frameHeight="75"/>
+    <SubTexture name="pgbutton" x="1156" y="1312" width="382" height="71" frameX="-10" frameY="-1" frameWidth="400" frameHeight="75"/>
     <SubTexture name="walls" x="2" y="873" width="1152" height="800" frameX="-22" frameY="-13" frameWidth="1196" frameHeight="869"/>
 </TextureAtlas>

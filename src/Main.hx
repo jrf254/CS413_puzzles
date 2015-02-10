@@ -17,7 +17,7 @@ class Main extends Sprite {
 	}
 	
 	public function start(){
-		map = new Image(Root.assets.getTexture("discoclub"));
+		map = new Image(Root.assets.getTexture("discoclub2"));
 		rootSprite.addChild(map);
 		player = new Player();
 		rootSprite.addChild(player);
