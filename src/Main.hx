@@ -9,6 +9,7 @@ import starling.events.EnterFrameEvent;
 class Main extends Sprite {
 	public var rootSprite:Sprite;
 	var map:Image;
+	var player:Player;
 	
 	public function new(rootSprite:Sprite) {
 		this.rootSprite = rootSprite;
@@ -18,7 +19,8 @@ class Main extends Sprite {
 	public function start(){
 		map = new Image(Root.assets.getTexture("discoclub2"));
 		rootSprite.addChild(map);
-		var player = new Player();
+		player = new Player();
 		rootSprite.addChild(player);
+		
 	}
 }
