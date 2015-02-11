@@ -1,0 +1,23 @@
+- Loading Screen Explaining Goal of game. Upon pressing start the game loads and players spawns inside 
+at the entrance to the club.
+
+- POWER: Player Has a list of objectives from the intro screen. The easiest one is turning on the power.
+Player must navigate to the DJ Booth and flip on obvious switch which turns on the power and
+Lights up the map.
+
+- DISCOBALL: Player must then obtain a new disco ball. The player must collect a water melon from
+behind the bar, they must then roll it in the glue located in at the front of the Disco in front
+of a wall of posters. The player must then roll the water melon in the glass from the broken
+Mirror in the bathroom. This creates a makeshift disco ball that the player places in the
+Middle of the dance floor.
+
+- MUSIC: Player must get some jams. The player must find the Polka Record in the VIP Room and take it
+to the FUNKOMATIC in the main Office, which will turn it into Disco Music. The player then places in in
+the record player in the DJ Booth. 
+
+- PEOPLE: Player must find the stack of Magazines in the Private Dance Room. After examining them they will find
+add and for Hype in a Night a service provider that hires random people to stand around at a
+location of your choice. The add says first hour free. Player takes the add and uses the phone in the office
+to call Hype in a Night, which causes a ton of people to suddenly appear at the Disco.
+
+Once all these are complete player enters the DJ Booth and gets their Funk on causing the game to end.
