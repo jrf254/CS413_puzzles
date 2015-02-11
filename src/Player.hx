@@ -80,39 +80,46 @@ class Player extends Image{
 			x = x + 1.5;
 			distance = distance + 1;
 			walk();
+			
 		} else if (downPress && leftPress){
 			rotation = .75;
 			y = y + 1.5;
 			x = x - 1.5;
 			distance = distance + 1;
 			walk();
+			
 		} else if (upPress && rightPress){
 			rotation = .75;
 			y = y - 1.5;
 			x = x + 1.5;
 			distance = distance + 1;
 			walk();
+			
 		} else if (upPress && leftPress){
 			rotation = 2.25;
 			y = y - 1.5;
 			x = x - 1.5;
 			distance = distance + 1;
 			walk();
+			
 		} else if(leftPress) {
 			rotation = 1.5;
 			x = x - 2;
 			distance = distance + 1;
 			walk();
+			
 		} else if (rightPress) {
 			rotation = 1.5;
 			x = x + 2;
 			distance = distance + 1;
 			walk();
+			
 		} else if (upPress) {
 			rotation = 0;
 			y = y - 2;
 			distance = distance + 1;
-			walk();			
+			walk();	
+			
 		} else if (downPress){
 			rotation = 0;
 			y = y + 2;
@@ -120,13 +127,17 @@ class Player extends Image{
 			walk();
 		}
 	}
+	
 	public function walk(){
 		if (distance == 10){
 			texture = pc2;
+			
 		} else if (distance == 20){
 			texture = pc3;
+			
 		} else if (distance == 30){
 			texture = pc4;
+			
 		} else if (distance == 40){
 			texture = pc5;
 			distance = 0;
