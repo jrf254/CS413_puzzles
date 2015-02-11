@@ -18,7 +18,7 @@ class Player extends Image{
 	var pc3:Texture = Root.assets.getTexture("PC3c");
 	var pc4:Texture = Root.assets.getTexture("PC3d");
 	var pc5:Texture = Root.assets.getTexture("PC3e");
-	var swap:Int = 1;
+	var distance:Int = 0;
 
 	
 	public function new(){
@@ -56,15 +56,19 @@ class Player extends Image{
 		
 		if (event.keyCode == Keyboard.LEFT) {
 			leftPress = false;
+			distance = 0;
 		}
 		if (event.keyCode == Keyboard.RIGHT){
 			rightPress = false;
+			distance = 0;
 		}
 		if (event.keyCode == Keyboard.UP){
-			upPress = false;								
+			upPress = false;
+			distance = 0;
 		}
 		if (event.keyCode == Keyboard.DOWN) {
 			downPress = false;
+			distance = 0;
 		}
 	}
 	
@@ -74,92 +78,58 @@ class Player extends Image{
 			rotation = 2.25;
 			y = y + 1.5;
 			x = x + 1.5;
+			distance = distance + 1;
+			walk();
 		} else if (downPress && leftPress){
 			rotation = .75;
 			y = y + 1.5;
 			x = x - 1.5;
+			distance = distance + 1;
+			walk();
 		} else if (upPress && rightPress){
 			rotation = .75;
 			y = y - 1.5;
 			x = x + 1.5;
+			distance = distance + 1;
+			walk();
 		} else if (upPress && leftPress){
 			rotation = 2.25;
 			y = y - 1.5;
 			x = x - 1.5;
+			distance = distance + 1;
+			walk();
 		} else if(leftPress) {
 			rotation = 1.5;
 			x = x - 2;
-			
+			distance = distance + 1;
+			walk();
 		} else if (rightPress) {
 			rotation = 1.5;
 			x = x + 2;
-			
+			distance = distance + 1;
+			walk();
 		} else if (upPress) {
-			if(swap == 1){
-			swap = 0;
-			//haxe.Timer.delay(function(){trace();},1000);
 			rotation = 0;
 			y = y - 2;
-		//	haxe.Timer.delay(function(){texture = pc2;},500);
-		//	haxe.Timer.delay(function(){texture = pc3;},500);
-		//	haxe.Timer.delay(function(){texture = pc2;},500);
-		//	haxe.Timer.delay(function(){texture = pc1;},500);
-		
-			texture = pc2;
-			haxe.Timer.delay(function()
-				{
-					y=y-2; 
-					texture = pc2; 
-					haxe.Timer.delay(function()
-					{
-						y=y-2; 
-						texture = pc3;
-						haxe.Timer.delay(function()
-						{
-							y=y-2; 
-							texture = pc2;
-							haxe.Timer.delay(function()
-							{
-								y=y-2; 
-								texture = pc1;
-								haxe.Timer.delay(function()
-								{
-									y=y-2; 
-									texture = pc4;
-									haxe.Timer.delay(function()
-									{
-										y=y-2; 
-										texture = pc5;
-										haxe.Timer.delay(function()
-										{
-											y=y-2; 
-											texture = pc4;
-											haxe.Timer.delay(function()
-											{
-												y=y-2; 
-												texture = pc1;
-								
-											},10);
-								
-									},50);
-								
-									},50);
-								
-								},50);
-
-							},50);
-						},50);
-					},50);
-				},50);
-			
-			haxe.Timer.delay(function(){swap=1;},450);
-			//trace("swap");
-			//swap = 1;
-			}
-			
+			distance = distance + 1;
+			walk();			
 		} else if (downPress){
 			rotation = 0;
 			y = y + 2;
-		} 
+			distance = distance + 1;
+			walk();
+		}
+	}
+	public function walk(){
+		if (distance == 10){
+			texture = pc2;
+		} else if (distance == 20){
+			texture = pc3;
+		} else if (distance == 30){
+			texture = pc4;
+		} else if (distance == 40){
+			texture = pc5;
+			distance = 0;
+		}
 	}
 }

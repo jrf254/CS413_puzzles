@@ -25,6 +25,7 @@ class Root extends Sprite {
 		
 		assets.enqueue("assets/spritesheet.png");
 		assets.enqueue("assets/spritesheet.xml");
+		assets.enqueue("assets/melon.png");
 		
         assets.loadQueue(function onProgress(ratio:Float) {
             haxe.Log.clear();
