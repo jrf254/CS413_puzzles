@@ -13,10 +13,16 @@ class Player extends Image{
 	var rightPress = false;
 	var upPress = false;
 	var downPress = false;
+	var pc1:Texture = Root.assets.getTexture("PC3a");
+	var pc2:Texture = Root.assets.getTexture("PC3b");
+	var pc3:Texture = Root.assets.getTexture("PC3c");
+	var pc4:Texture = Root.assets.getTexture("PC3d");
+	var pc5:Texture = Root.assets.getTexture("PC3e");
+	var swap:Int = 1;
 
 	
 	public function new(){
-		super(Root.assets.getTexture("PC3a"));
+		super(pc1);
 		x = Starling.current.stage.stageWidth / 2;
 		y = Starling.current.stage.stageHeight / 2;
 		pivotX = this.texture.width / 2;
@@ -89,8 +95,67 @@ class Player extends Image{
 			x = x + 2;
 			
 		} else if (upPress) {
+			if(swap == 1){
+			swap = 0;
+			//haxe.Timer.delay(function(){trace();},1000);
 			rotation = 0;
 			y = y - 2;
+		//	haxe.Timer.delay(function(){texture = pc2;},500);
+		//	haxe.Timer.delay(function(){texture = pc3;},500);
+		//	haxe.Timer.delay(function(){texture = pc2;},500);
+		//	haxe.Timer.delay(function(){texture = pc1;},500);
+		
+			texture = pc2;
+			haxe.Timer.delay(function()
+				{
+					y=y-2; 
+					texture = pc2; 
+					haxe.Timer.delay(function()
+					{
+						y=y-2; 
+						texture = pc3;
+						haxe.Timer.delay(function()
+						{
+							y=y-2; 
+							texture = pc2;
+							haxe.Timer.delay(function()
+							{
+								y=y-2; 
+								texture = pc1;
+								haxe.Timer.delay(function()
+								{
+									y=y-2; 
+									texture = pc4;
+									haxe.Timer.delay(function()
+									{
+										y=y-2; 
+										texture = pc5;
+										haxe.Timer.delay(function()
+										{
+											y=y-2; 
+											texture = pc4;
+											haxe.Timer.delay(function()
+											{
+												y=y-2; 
+												texture = pc1;
+								
+											},10);
+								
+									},50);
+								
+									},50);
+								
+								},50);
+
+							},50);
+						},50);
+					},50);
+				},50);
+			
+			haxe.Timer.delay(function(){swap=1;},450);
+			//trace("swap");
+			//swap = 1;
+			}
 			
 		} else if (downPress){
 			rotation = 0;
