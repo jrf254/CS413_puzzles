@@ -21,6 +21,8 @@ class Menu extends Sprite{
 	
 	public var menu:Image;
 	public var playButton:Image;
+	public var iButton:Image;
+	public var cButton:Image;
 
 	public function new(rootSprite:Sprite) {
 		this.rootSprite = rootSprite;
@@ -38,7 +40,15 @@ class Menu extends Sprite{
         playButton.y = 500;
 		rootSprite.addChild(playButton);
 
+		iButton = new Image(Root.assets.getTexture("ibutton"));
+		iButton.x = 400;
+		iButton.y = 580;
+		rootSprite.addChild(iButton);
 
+		cButton = new Image(Root.assets.getTexture("cbutton"));
+		cButton.x = 400;
+		cButton.y = 660;
+		rootSprite.addChild(cButton);
 
 
 		flash.Lib.current.stage.addEventListener(flash.events.Event.RESIZE,
