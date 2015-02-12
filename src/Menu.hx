@@ -66,7 +66,25 @@ class Menu extends Sprite{
                 if (touch != null){
                    	var game = new Main(rootSprite);
                    	game.start();
-        }});           	
+        }});       
+
+        iButton.addEventListener(TouchEvent.TOUCH, function(e:TouchEvent){
+            var touch = e.getTouch(iButton, TouchPhase.BEGAN);
+                if (touch != null){
+        			rootSprite.removeChild(playButton);
+        			rootSprite.removeChild(cButton);
+        			iButton.x = 400;
+        			iButton.y = 100;
+        }}); 
+
+        cButton.addEventListener(TouchEvent.TOUCH, function(e:TouchEvent){
+            var touch = e.getTouch(cButton, TouchPhase.BEGAN);
+                if (touch != null){
+        			rootSprite.removeChild(playButton);
+        			rootSprite.removeChild(iButton);
+        			cButton.x = 400;
+        			cButton.y = 100;
+        }});     	
 
 	}
 
