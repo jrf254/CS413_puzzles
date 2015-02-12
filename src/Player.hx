@@ -51,10 +51,21 @@ class Player extends Image{
 			downPress = true;
 		}
 	}
+
+
 	
+	
+	public function stopWalking(event:KeyboardEvent)
+	{
+
+		trace(KeyboardEvent.KEY_UP);
+	}
+
 	public function keyUp(event:KeyboardEvent) {
 		
+
 		if (event.keyCode == Keyboard.LEFT) {
+			//trace(KeyboardEvent.KEY_UP);
 			leftPress = false;
 			distance = 0;
 		}
@@ -69,6 +80,12 @@ class Player extends Image{
 		if (event.keyCode == Keyboard.DOWN) {
 			downPress = false;
 			distance = 0;
+		}
+
+
+		if(KeyboardEvent.KEY_UP == "keyUp")
+		{
+			texture = pc1;
 		}
 	}
 	
