@@ -25,7 +25,7 @@ class Root extends Sprite {
 		
 		assets.enqueue("assets/spritesheet.png");
 		assets.enqueue("assets/spritesheet.xml");
-		assets.enqueue("assets/melon.png");
+		assets.enqueue("assets/walls.png");
 		assets.enqueue("assets/pwrbutt1.png");
 		
         assets.loadQueue(function onProgress(ratio:Float) {

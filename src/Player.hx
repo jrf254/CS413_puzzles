@@ -6,6 +6,7 @@ import starling.events.EnterFrameEvent;
 import flash.ui.Keyboard;
 import starling.core.Starling;
 import starling.display.Quad;
+import flash.geom.Rectangle;
 
 class Player extends Image{
 
@@ -19,7 +20,6 @@ class Player extends Image{
 	var pc4:Texture = Root.assets.getTexture("PC3d");
 	var pc5:Texture = Root.assets.getTexture("PC3e");
 	var distance:Int = 0;
-
 	
 	public function new(){
 		super(pc1);
@@ -91,7 +91,6 @@ class Player extends Image{
 	}
 	
 	public function enterFrame(event:EnterFrameEvent) {
-		
 		if (downPress && rightPress){
 			rotation = 2.25;
 			y = y + 1.5;
@@ -161,4 +160,6 @@ class Player extends Image{
 			distance = 0;
 		}
 	}
+	
+	
 }

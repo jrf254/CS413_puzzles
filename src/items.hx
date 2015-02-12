@@ -10,9 +10,12 @@ import starling.utils.AssetManager;
 
 class Items extends Image{
 
-	public function new(texture_item:String, x_cord:Int, y_cord:Int){
+	public function new(texture_item:String, x_cord:Float, y_cord:Float){
 		super(Root.assets.getTexture(texture_item));
 		x = x_cord;
 		y = y_cord;
+		//this.addEventListener(EnterFrameEvent.ENTER_FRAME, enterFrame);
 	}
+	
+	
 }
