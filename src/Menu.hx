@@ -23,6 +23,7 @@ class Menu extends Sprite{
 	public var playButton:Image;
 	public var iButton:Image;
 	public var cButton:Image;
+	public var backButton:Image;
 
 	public function new(rootSprite:Sprite) {
 		this.rootSprite = rootSprite;
@@ -50,6 +51,10 @@ class Menu extends Sprite{
 		cButton.y = 660;
 		rootSprite.addChild(cButton);
 
+		backButton = new Image(Root.assets.getTexture("bbutton"));
+		backButton.x = 770;
+		backButton.y = 775;
+
 
 		flash.Lib.current.stage.addEventListener(flash.events.Event.RESIZE,
             function(e:flash.events.Event) {
@@ -71,20 +76,40 @@ class Menu extends Sprite{
         iButton.addEventListener(TouchEvent.TOUCH, function(e:TouchEvent){
             var touch = e.getTouch(iButton, TouchPhase.BEGAN);
                 if (touch != null){
-        			rootSprite.removeChild(playButton);
-        			rootSprite.removeChild(cButton);
+                	rootSprite.removeChild(cButton);
+                	rootSprite.removeChild(playButton);
+                	rootSprite.addChild(backButton);
         			iButton.x = 400;
-        			iButton.y = 100;
+        			iButton.y = 50;
         }}); 
 
         cButton.addEventListener(TouchEvent.TOUCH, function(e:TouchEvent){
             var touch = e.getTouch(cButton, TouchPhase.BEGAN);
                 if (touch != null){
-        			rootSprite.removeChild(playButton);
-        			rootSprite.removeChild(iButton);
+                	rootSprite.removeChild(iButton);
+                	rootSprite.removeChild(playButton);
+                	rootSprite.addChild(backButton);
         			cButton.x = 400;
-        			cButton.y = 100;
-        }});     	
+        			cButton.y = 50;
+        }});  
+
+        backButton.addEventListener(TouchEvent.TOUCH, function(e:TouchEvent){
+            var touch = e.getTouch(backButton, TouchPhase.BEGAN);
+               	if (touch != null){
+               	rootSprite.removeChild(backButton);
+               	rootSprite.removeChild(iButton);
+                rootSprite.removeChild(playButton);
+				rootSprite.removeChild(cButton);
+				playButton.x = 400;
+        		playButton.y = 500;
+				rootSprite.addChild(playButton);
+				iButton.x = 400;
+				iButton.y = 580;
+				rootSprite.addChild(iButton);
+				cButton.x = 400;
+				cButton.y = 660;
+				rootSprite.addChild(cButton);
+        }});           	
 
 	}
 
