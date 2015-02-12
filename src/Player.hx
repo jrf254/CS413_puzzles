@@ -85,6 +85,7 @@ class Player extends Image{
 
 		if(KeyboardEvent.KEY_UP == "keyUp")
 		{
+			if(event.keyCode == Keyboard.DOWN || event.keyCode == Keyboard.UP || event.keyCode == Keyboard.LEFT || event.keyCode == Keyboard.RIGHT)
 			texture = pc1;
 		}
 	}
