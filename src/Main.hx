@@ -32,6 +32,7 @@ class Main extends Sprite {
 	var mirror:Items;
 	var glueMelon:Items;
 	var discoBall:Items;
+	var fl:Floor;
 	public static var tf:TextField;
 	public static var emptyT:Bool = true;
 	
@@ -47,6 +48,8 @@ class Main extends Sprite {
 		map2 = new Image(Root.assets.getTexture("Discomap5"));
 		map2.alpha = 0;
 		rootSprite.addChild(map2);
+		fl = new Floor();
+		rootSprite.addChild(fl);
 		player = new Player();
 		rootSprite.addChild(player);
 		inventory = new Image(Root.assets.getTexture("inventory"));
@@ -175,6 +178,7 @@ They say this is the sound track of Hell itself.");
 		butt.interacted = true;
 		rootSprite.removeChild(map);
 		map2.alpha = 1;
+		fl.begin();
 	}
 
 	public function glueMel(){
