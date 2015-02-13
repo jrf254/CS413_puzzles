@@ -32,7 +32,7 @@ class Menu extends Sprite{
 	}
 
 	public function mainMenu(){
-		menu = new Image(Root.assets.getTexture("menu"));	
+		menu = new Image(Root.assets.getTexture("menu2"));	
 		menu.width = flash.Lib.current.stage.stageWidth;
         menu.height = flash.Lib.current.stage.stageHeight;
 		rootSprite.addChild(menu);
