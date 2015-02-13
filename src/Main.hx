@@ -192,7 +192,7 @@ They say this is the sound track of Hell itself.");
 		    return;  
 		}
 		else {
-			discoBall = new Items("discoball", 803, 638, false, "");
+			discoBall = new Items("discoball", 803, 638, false, "The ball that creates the funky vibes that drives Agent Gary straight to funky town.");
 			discoBall.x = 803;
 			discoBall.y = 638;
 			discoBall.inPossession = true;
