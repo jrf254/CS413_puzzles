@@ -28,6 +28,8 @@ class Main extends Sprite {
 	var funco:Items;
 	var mag:Items;
 	var inventory:Image;
+	var polka:Items;
+	var mirror:Items;
 	public static var tf:TextField;
 	public static var emptyT:Bool = true;
 	
@@ -51,19 +53,19 @@ class Main extends Sprite {
 		rootSprite.addChild(inventory);
 		
 // Items DO NOT CHANGE PLACEMENT OF TEXT it shows up wrong if its not spaced like this.
-		butt = new Items("pwrbutt1", 90, 230.5, false, "It's a shiny red button with the word power on it.
+		butt = new Items("pwrbutt1", 90, 230.5, false, "It's a Shiny Red Button with the word Power on it.
 You are not sure if you should press it. But you are sure that it is only a matter or time before you do.");
 		rootSprite.addChild(butt);
 		
-		glue = new Items("canOfGlue", 200, 230.5, false, "It's a can of glue.
+		glue = new Items("canOfGlue", 200, 230.5, false, "It's a Can of Glue.
 Many good horses died to bring you this adhesive... probably.");
 		rootSprite.addChild(glue);
 		
-		melon = new Items("melon", 170, 640.5, true, "It's a round watermelon.
+		melon = new Items("melon", 170, 640.5, true, "It's a Round Watermelon.
 You would have a slice but you don't like watermelons. You are much more a Cantelope, kind of guy.");
 		rootSprite.addChild(melon);
 		
-		phone = new Items("phone", 150, 100, false, "It's a phone.
+		phone = new Items("phone", 150, 100, false, "It's a Phone.
 Ring, ring, ring, ring, ring, ring, ring, bannan phone.");
 		rootSprite.addChild(phone);
 		
@@ -72,8 +74,16 @@ Puts the FUNK back in anything that is larger than a bread box, but smaller than
 		rootSprite.addChild(funco);
 		
 		mag = new Items("magazines", 100, 500.5, false, "It's a stack of Magazines.
-'Elvis LIVES!' reads one cover. Did he ever really die?.");
+One of the covers reads 'Elvis LIVES!' Did he ever really die?.");
 		rootSprite.addChild(mag);
+
+		polka = new Items("polka", 815, 280, false, "It's a Polka Record.
+They say this is the sound track of Hell itself.");
+		rootSprite.addChild(polka);
+
+		mirror = new Items("mirror", 420, 15, false, "It's a Broken Mirror.
+'There is mirror shards everywhere. Lucky you don't have to worry about stepping on them. They are so reflective its easy to spot them.");
+		rootSprite.addChild(mirror);
 		
 //Event Listeners
 		Starling.current.stage.addEventListener(KeyboardEvent.KEY_DOWN, keyDown);
