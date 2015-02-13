@@ -57,7 +57,7 @@ class Main extends Sprite {
 		inventory.x = 770;
 		inventory.y = 600;
 		rootSprite.addChild(inventory);
-		Root.assets.playSound("disco_3",0,100);
+		//Root.assets.playSound("disco_3",0,100);
 		
 		// Items DO NOT CHANGE PLACEMENT OF TEXT it shows up wrong if its not spaced like this.
 		/*butt = new Items("pwrbutt1", 90, 230, false, "It's a shiny red button with the word power on it.
@@ -110,8 +110,7 @@ They say this is the sound track of Hell itself.");
 'There is mirror shards everywhere. Lucky you don't have to worry about stepping on them. They are so reflective its easy to spot them.");
 		rootSprite.addChild(mirror);
 
-		discoBall = new Items("discoball", 803, 638, false, "The ball that creates the funky vibes that 
-				drives Agent Gary straight to funky town.");
+		discoBall = new Items("discoball", 803, 638, false, "The ball that creates the funky vibes that drives Agent Gary straight to funky town.");
 
 		glueMelon = new Items("melon2", 803, 638, false, "");
 
