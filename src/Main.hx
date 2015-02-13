@@ -192,7 +192,8 @@ They say this is the sound track of Hell itself.");
 		    return;  
 		}
 		else {
-			discoBall = new Items("discoball", 803, 638, false, "The ball that creates the funky vibes that drives Agent Gary straight to funky town.");
+			discoBall = new Items("discoball", 803, 638, false, "The ball that creates the funky vibes that 
+				drives Agent Gary straight to funky town.");
 			discoBall.x = 803;
 			discoBall.y = 638;
 			discoBall.inPossession = true;
@@ -202,7 +203,8 @@ They say this is the sound track of Hell itself.");
 	}
 
 	public function placeBall(){
-		if(((((player.x - 496) > -30) && ((player.x - 496) < 30)) && (((player.y - 448) > -30) && ((player.y - 448) < 30))) && discoBall.inPossession == true){
+		if(((((player.x - 496) > -30) && ((player.x - 496) < 30)) && (((player.y - 448) > -30) && 
+			((player.y - 448) < 30))) && discoBall.inPossession == true){
 			discoBall.x = 496;
 			discoBall.y = 448;
 			rootSprite.removeChild(glueMelon);      
