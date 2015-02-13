@@ -95,8 +95,8 @@ You would have a slice but you don't like watermelons. You are much more a Cante
 Ring, ring, ring, ring, ring, ring, ring, bannan phone.");
 		rootSprite.addChild(phone);
 		
-		funco = new Items("funco", 50, 20.5, false, "It's a Funk O Matic.
-Puts the FUNK back in anything that is larger than a bread box, but smaller than a car wheel.");
+		funco = new Items("funco", 50, 20.5, false, "It's a Juke Box.
+Probably could turn it on if you wanted to.");
 		rootSprite.addChild(funco);
 		
 		mag = new Items("magazines", 100, 500.5, false, "It's a stack of Magazines.
