@@ -38,7 +38,7 @@ class Main extends Sprite {
 	
 	var powerOn:Int;
 	var discoBallOn:Int;
-	var musicOn:Int = 1;
+	var musicOn:Int;
 	
 
 	public function new(rootSprite:Sprite) {
