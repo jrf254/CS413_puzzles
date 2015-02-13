@@ -111,7 +111,8 @@ They say this is the sound track of Hell itself.");
 		Starling.current.stage.addEventListener("wipe",eraseBoard);
 		Starling.current.stage.addEventListener("power", power);	
 		Starling.current.stage.addEventListener("glue", glueMel);
-		Starling.current.stage.addEventListener("glass", addGlass);	
+		Starling.current.stage.addEventListener("glass", addGlass);
+		Starling.current.stage.addEventListener("dPressed", placeBall);
 	}
 	
 	public function keyDown(event:KeyboardEvent) {
@@ -197,6 +198,17 @@ They say this is the sound track of Hell itself.");
 			discoBall.inPossession = true;
 			rootSprite.addChild(discoBall);
 			rootSprite.removeChild(glueMelon);
+		}
+	}
+
+	public function placeBall(){
+		if(((((player.x - 496) > -30) && ((player.x - 496) < 30)) && (((player.y - 448) > -30) && ((player.y - 448) < 30))) && discoBall.inPossession == true){
+			discoBall.x = 496;
+			discoBall.y = 448;
+			rootSprite.removeChild(glueMelon);      
+		}
+		else {
+			return;
 		}
 	}
 }
