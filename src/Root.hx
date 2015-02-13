@@ -29,7 +29,7 @@ class Root extends Sprite {
         assets.enqueue("assets/club2.png");
         assets.enqueue("assets/melon2.png");
         assets.enqueue("assets/discoball.png");
-
+		assets.enqueue("assets/music/disco_1.mp3");
 		
         assets.loadQueue(function onProgress(ratio:Float) {
             haxe.Log.clear();
