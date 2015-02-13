@@ -17,17 +17,37 @@ class Items extends Image{
 
 	public var description:String;
 	public var takeable:Bool;
+	public var interacted:Bool;
+	public var item:String;
 
 	public function new(texture_item:String, x_cord:Float, y_cord:Float, T:Bool, D:String){
 		description = D;
 		takeable = T;
+		interacted = false;
+		item = texture_item;
 		//trace(description);
 		super(Root.assets.getTexture(texture_item));
 		x = x_cord;
 		y = y_cord;
 		Starling.current.stage.addEventListener("aPressed",desc);
 		Starling.current.stage.addEventListener("sPressed", take);
+		Starling.current.stage.addEventListener("dPressed", interact);
 		//this.addEventListener(EnterFrameEvent.ENTER_FRAME, enterFrame);
+	}
+
+	public function interact(){
+		// alredy interacted
+		if(interacted == true){
+			return;
+		}
+		else {
+			if(((((Player.xcor - x) > -30) && ((Player.xcor - x) < 30)) && (((Player.ycor - y) > -30) && ((Player.ycor - y) < 30)))){
+				if(item == "pwrbutt1"){
+					texture = Root.assets.getTexture("pwrbutt2");
+					if(Main.emptyT == true) Starling.current.stage.dispatchEvent(new Event("power"));
+				}
+			}
+		}
 	}
 
 	public function take(){

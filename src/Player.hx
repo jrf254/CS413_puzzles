@@ -114,6 +114,12 @@ class Player extends Image{
 			if(Main.emptyT == true)Starling.current.stage.dispatchEvent(new Event("sPressed"));
 		}
 
+		if(event.keyCode == Keyboard.D){
+			xcor = x;
+			ycor = y;
+			if(Main.emptyT == true)Starling.current.stage.dispatchEvent(new Event("dPressed"));
+		}
+
 		if(KeyboardEvent.KEY_UP == "keyUp")
 		{
 			if(event.keyCode == Keyboard.DOWN || event.keyCode == Keyboard.UP || event.keyCode == Keyboard.LEFT || event.keyCode == Keyboard.RIGHT)

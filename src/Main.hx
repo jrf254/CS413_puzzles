@@ -19,6 +19,7 @@ import starling.utils.VAlign;
 class Main extends Sprite {
 	public var rootSprite:Sprite;
 	var map:Image;
+	var map2:Image;
 	public var player:Player;
 	var texture1:Items;
 	var glue:Items;
@@ -37,8 +38,11 @@ class Main extends Sprite {
 	}
 	
 	public function start(){
-		map = new Image(Root.assets.getTexture("discoclub2"));
+		map = new Image(Root.assets.getTexture("club2"));
 		rootSprite.addChild(map);
+		map2 = new Image(Root.assets.getTexture("discoclub2"));
+		map2.alpha = 0;
+		rootSprite.addChild(map2);
 		player = new Player();
 		rootSprite.addChild(player);
 		inventory = new Image(Root.assets.getTexture("inventory"));
@@ -70,6 +74,7 @@ Puts the FUNK back in anything that is larger than a bread box, but smaller than
 		Starling.current.stage.addEventListener(KeyboardEvent.KEY_DOWN, keyDown);
 		Starling.current.stage.addEventListener("print",addstuff);
 		Starling.current.stage.addEventListener("wipe",eraseBoard);
+		Starling.current.stage.addEventListener("power", power);
 		//var bounds1:Wall = new Wall(22,13,8, 237, player);
 		//rootSprite.addChild(bounds1);
 		//var bounds2:Rectangle = new Rectangle(22,229,113,7);
@@ -118,6 +123,12 @@ Puts the FUNK back in anything that is larger than a bread box, but smaller than
 		rootSprite.removeChild(tf);
 		emptyT = true;
 		}
+	}
+
+	public function power(){
+		texture1.interacted = true;
+		rootSprite.removeChild(map);
+		map2.alpha = 1;
 	}
 
 }
