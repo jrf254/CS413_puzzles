@@ -107,6 +107,7 @@ class Menu extends Sprite{
                	rootSprite.removeChild(iButton);
                 rootSprite.removeChild(playButton);
 				rootSprite.removeChild(cButton);
+				rootSprite.removeChild(credits);
 				playButton.x = 200;
         		playButton.y = 400;
 				rootSprite.addChild(playButton);
