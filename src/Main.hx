@@ -228,7 +228,6 @@ There are mirror shards everywhere. Lucky you don't have to worry about stepping
 	
 	public function playMusic(){
 		funco.interacted = true;
-		trace("boners");
 		Root.assets.playSound("disco_3", 0, 1000);
 		musicOn = 1;
 		winCond();
