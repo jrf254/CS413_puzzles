@@ -70,10 +70,10 @@ class Main extends Sprite {
 		rootSprite.addChild(funco);
 		mag = new Items("magazines", 670, 30.5, false, "It's a stack of Magazines.
 			'Elvis LIVES!' reads one cover. Did he ever really die?.");
-		// Items DO NOT CHANGE PLACEMENT OF TEXT it shows up wrong if its not spaced like this.
+		// Items DO NOT CHANGE PLACEMENT OF TEXT it shows up wrong if its not spaced like this.*/
 		butt = new Items("pwrbutt1", 90, 230.5, false, "It's a Shiny Red Button with the word Power on it.
-			You are not sure if you should press it. But you are sure that it is only a matter or time before you do.");
-		rootSprite.addChild(butt);*/
+You are not sure if you should press it. But you are sure that it is only a matter or time before you do.");
+		rootSprite.addChild(butt);
 		
 		glue = new Items("canOfGlue", 200, 230.5, false, "It's a Can of Glue.
 Many good horses died to bring you this adhesive... probably.");
