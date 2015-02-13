@@ -264,10 +264,7 @@ drives Agent Gary straight to funky town.");
 		funco.interacted = true;
 		Root.assets.playSound("disco_3", 0, 1000);
 		musicOn = 1;
-//<<<<<<< HEAD
 		discodisk.inPossession == false;
-//=======
-//>>>>>>> origin/master
 		rootSprite.removeChild(discodisk);
 		winCond();
 		}
