@@ -55,8 +55,8 @@ class Items extends Image{
 		{
 
 			if(((((Player.xcor - x) > -30) && ((Player.xcor - x) < 30)) && (((Player.ycor - y) > -30) && ((Player.ycor - y) < 30)))){
-				x = 1100;
-				y = 300;
+				x = 803;
+				y = 638;
 			}
 		}
 	}
