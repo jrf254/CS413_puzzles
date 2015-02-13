@@ -53,7 +53,7 @@ class Main extends Sprite {
 		inventory.x = 770;
 		inventory.y = 600;
 		rootSprite.addChild(inventory);
-		Root.assets.playSound("disco_1");
+		Root.assets.playSound("disco_3",0,100);
 		
 		// Items DO NOT CHANGE PLACEMENT OF TEXT it shows up wrong if its not spaced like this.
 		/*butt = new Items("pwrbutt1", 90, 230, false, "It's a shiny red button with the word power on it.
