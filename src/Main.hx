@@ -24,6 +24,8 @@ class Main extends Sprite {
 	var glue:Items;
 	var melon:Items;
 	var phone:Items;
+	var funco:Items;
+	var mag:Items;
 	public static var tf:TextField;
 	public static var emptyT:Bool = true;
 	
@@ -38,18 +40,28 @@ class Main extends Sprite {
 		rootSprite.addChild(map);
 		player = new Player();
 		rootSprite.addChild(player);
+		
+// Items DO NOT CHANGE PLACEMENT OF TEXT it shows up wrong if its not spaced like this.
 		texture1 = new Items("pwrbutt1", 200, 235.5, "It's a shiny red button with the word power on it.
 You are not sure if you should press it. But you are sure that it is only a matter or time before you do.");
 		rootSprite.addChild(texture1);
-		glue = new Items("canOfGlue", 300, 240.5, "It's a can of glue.
+		glue = new Items("canOfGlue", 300, 230.5, "It's a can of glue.
 Many good horses died to bring you this adhesive... probably.");
 		rootSprite.addChild(glue);
 		melon = new Items("melon", 270, 640.5, "It's a round watermelon.
 You would have a slice but you don't like watermelons. You are much more a Cantelope, kind of guy.");
 		rootSprite.addChild(melon);
-		phone = new Items("phone", 170, 50.5, "It's a phone.
+		phone = new Items("phone", 170, 30.5, "It's a phone.
 Ring, ring, ring, ring, ring, ring, ring, bannan phone.");
 		rootSprite.addChild(phone);
+		funco = new Items("funco", 270, 30.5, "It's a Funk O Matic.
+Puts the FUNK back in anything that is larger than a bread box, but smaller than a car wheel.");
+		rootSprite.addChild(funco);
+		mag = new Items("magazines", 670, 30.5, "It's a stack of Magazines.
+'Elvis LIVES!' reads one cover. Did he ever really die?.");
+		rootSprite.addChild(mag);
+		
+//Event Listeners
 		Starling.current.stage.addEventListener(KeyboardEvent.KEY_DOWN, keyDown);
 		Starling.current.stage.addEventListener("print",addstuff);
 		Starling.current.stage.addEventListener("wipe",eraseBoard);
@@ -71,10 +83,10 @@ Ring, ring, ring, ring, ring, ring, ring, bannan phone.");
 	{
 		
 		// currently this spawns a text box in the top left of the screen.
-			var tff:TextField = new TextField(500,100, i, "Arial", 14, 0x0);
+			var tff:TextField = new TextField(500,100, i, "Arial", 16, 0x0);
 			tff.hAlign = HAlign.LEFT;  // horizontal alignment
 			tff.vAlign = VAlign.TOP; // vertical alignment
-			tff.border = true;
+			tff.border = false;
 			tff.x = 520;
 			tff.y = 730;
 			tf = tff;
