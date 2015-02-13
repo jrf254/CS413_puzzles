@@ -7,6 +7,8 @@ import flash.ui.Keyboard;
 import starling.core.Starling;
 import starling.display.Quad;
 import flash.geom.Rectangle;
+import starling.events.EventDispatcher;
+import starling.events.Event;
 
 class Player extends Image{
 
@@ -20,6 +22,9 @@ class Player extends Image{
 	var pc4:Texture = Root.assets.getTexture("PC3d");
 	var pc5:Texture = Root.assets.getTexture("PC3e");
 	var distance:Int = 0;
+	public static var xcor:Float;
+	public static var ycor:Float;
+
 	
 	public function new(){
 		super(pc1);
@@ -50,6 +55,7 @@ class Player extends Image{
 		if (event.keyCode == Keyboard.DOWN) {
 			downPress = true;
 		}
+
 	}
 
 
@@ -68,26 +74,34 @@ class Player extends Image{
 			//trace(KeyboardEvent.KEY_UP);
 			leftPress = false;
 			distance = 0;
+			Starling.current.stage.dispatchEvent(new Event("wipe"));
 		}
 		if (event.keyCode == Keyboard.RIGHT){
 			rightPress = false;
 			distance = 0;
+			Starling.current.stage.dispatchEvent(new Event("wipe"));
 		}
 		if (event.keyCode == Keyboard.UP){
 			upPress = false;
 			distance = 0;
+			Starling.current.stage.dispatchEvent(new Event("wipe"));
 		}
 		if (event.keyCode == Keyboard.DOWN) {
 			downPress = false;
 			distance = 0;
+			Starling.current.stage.dispatchEvent(new Event("wipe"));
 		}
-
-
-		if(KeyboardEvent.KEY_UP == "keyUp")
+		if (event.keyCode == Keyboard.A)
 		{
-			if(event.keyCode == Keyboard.DOWN || event.keyCode == Keyboard.UP || event.keyCode == Keyboard.LEFT || event.keyCode == Keyboard.RIGHT)
-			texture = pc1;
+			// this passes the players location and tells the game that he want to examin an item
+			// if an item is in range it sends its description to main which prints it to the screen.trace
+			// moveing will delete the desc from the screen
+			xcor = x;
+			ycor = y;
+			Starling.current.stage.dispatchEvent(new Event("aPressed"));	
+
 		}
+
 	}
 	
 	public function enterFrame(event:EnterFrameEvent) {
