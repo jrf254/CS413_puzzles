@@ -63,6 +63,8 @@ class Player extends Image{
 	}
 
 
+
+
 	
 	
 	public function stopWalking(event:KeyboardEvent)
@@ -104,6 +106,11 @@ class Player extends Image{
 			ycor = y;
 			if(Main.emptyT == true)Starling.current.stage.dispatchEvent(new Event("aPressed"));	
 
+		}
+		if(KeyboardEvent.KEY_UP == "keyUp")
+		{
+			if(event.keyCode == Keyboard.DOWN || event.keyCode == Keyboard.UP || event.keyCode == Keyboard.LEFT || event.keyCode == Keyboard.RIGHT)
+			texture = pc1;
 		}
 
 	}
