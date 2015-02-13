@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with TexturePacker http://www.codeandweb.com/texturepacker-->
+<!-- $TexturePacker:SmartUpdate:724f2a180645df9a18e2bcafd23e16fe:5287eaa331a16aee808e32e3671e42bc:59d0ea613393eb208d27221bb1a3709f$ -->
+<TextureAtlas imagePath="spritesheet1.png">
+    <SubTexture name="intro3" x="2" y="2" width="877" height="724"/>
+    <SubTexture name="menu3" x="881" y="2" width="877" height="724"/>
+</TextureAtlas>
