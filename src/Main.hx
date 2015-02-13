@@ -26,6 +26,7 @@ class Main extends Sprite {
 	var phone:Items;
 	var funco:Items;
 	var mag:Items;
+	var inventory:Image;
 	public static var tf:TextField;
 	public static var emptyT:Bool = true;
 	
@@ -40,6 +41,10 @@ class Main extends Sprite {
 		rootSprite.addChild(map);
 		player = new Player();
 		rootSprite.addChild(player);
+		inventory = new Image(Root.assets.getTexture("inventory"));
+		inventory.x = 1050;
+		inventory.y = 280;
+		rootSprite.addChild(inventory);
 		
 // Items DO NOT CHANGE PLACEMENT OF TEXT it shows up wrong if its not spaced like this.
 		texture1 = new Items("pwrbutt1", 200, 235.5, "It's a shiny red button with the word power on it.
