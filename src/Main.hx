@@ -50,36 +50,33 @@ class Main extends Sprite {
 		inventory.y = 280;
 		rootSprite.addChild(inventory);
 		
-// Items DO NOT CHANGE PLACEMENT OF TEXT it shows up wrong if its not spaced like this.
+		// Items DO NOT CHANGE PLACEMENT OF TEXT it shows up wrong if its not spaced like this.
 		texture1 = new Items("pwrbutt1", 200, 235.5, false, "It's a shiny red button with the word power on it.
-You are not sure if you should press it. But you are sure that it is only a matter or time before you do.");
+			You are not sure if you should press it. But you are sure that it is only a matter or time before you do.");
 		rootSprite.addChild(texture1);
 		glue = new Items("canOfGlue", 300, 230.5, false, "It's a can of glue.
-Many good horses died to bring you this adhesive... probably.");
+			Many good horses died to bring you this adhesive... probably.");
 		rootSprite.addChild(glue);
 		melon = new Items("melon", 270, 640.5, true, "It's a round watermelon.
-You would have a slice but you don't like watermelons. You are much more a Cantelope, kind of guy.");
+			You would have a slice but you don't like watermelons. You are much more a Cantelope, kind of guy.");
 		rootSprite.addChild(melon);
 		phone = new Items("phone", 170, 30.5, false, "It's a phone.
-Ring, ring, ring, ring, ring, ring, ring, bannan phone.");
+			Ring, ring, ring, ring, ring, ring, ring, bannan phone.");
 		rootSprite.addChild(phone);
 		funco = new Items("funco", 270, 30.5, false, "It's a Funk O Matic.
-Puts the FUNK back in anything that is larger than a bread box, but smaller than a car wheel.");
+			Puts the FUNK back in anything that is larger than a bread box, but smaller than a car wheel.");
 		rootSprite.addChild(funco);
 		mag = new Items("magazines", 670, 30.5, false, "It's a stack of Magazines.
-'Elvis LIVES!' reads one cover. Did he ever really die?.");
+			'Elvis LIVES!' reads one cover. Did he ever really die?.");
 		rootSprite.addChild(mag);
 		
-//Event Listeners
+		//Event Listeners
 		Starling.current.stage.addEventListener(KeyboardEvent.KEY_DOWN, keyDown);
 		Starling.current.stage.addEventListener("print",addstuff);
 		Starling.current.stage.addEventListener("wipe",eraseBoard);
-		Starling.current.stage.addEventListener("power", power);
-		//var bounds1:Wall = new Wall(22,13,8, 237, player);
-		//rootSprite.addChild(bounds1);
-		//var bounds2:Rectangle = new Rectangle(22,229,113,7);
-		
+		Starling.current.stage.addEventListener("power", power);		
 	}
+	
 	public function keyDown(event:KeyboardEvent) {
 		
 		if (event.keyCode == Keyboard.SPACE) {
@@ -88,18 +85,18 @@ Puts the FUNK back in anything that is larger than a bread box, but smaller than
 			map.alpha = 1;
 		}
 	}
+	
 	// these creates the text window
 	public static function textWindow(i:String)
 	{
-		
 		// currently this spawns a text box in the top left of the screen.
-			var tff:TextField = new TextField(500,100, i, "Arial", 16, 0x0);
-			tff.hAlign = HAlign.LEFT;  // horizontal alignment
-			tff.vAlign = VAlign.TOP; // vertical alignment
-			tff.border = false;
-			tff.x = 520;
-			tff.y = 730;
-			tf = tff;
+		var tff:TextField = new TextField(500,100, i, "Arial", 16, 0x0);
+		tff.hAlign = HAlign.LEFT;  // horizontal alignment
+		tff.vAlign = VAlign.TOP; // vertical alignment
+		tff.border = false;
+		tff.x = 520;
+		tff.y = 730;
+		tf = tff;
 
 	}
 
@@ -130,5 +127,4 @@ Puts the FUNK back in anything that is larger than a bread box, but smaller than
 		rootSprite.removeChild(map);
 		map2.alpha = 1;
 	}
-
 }

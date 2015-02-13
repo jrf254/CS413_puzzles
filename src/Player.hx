@@ -135,13 +135,20 @@ class Player extends Image{
 			x = x + 1.5;
 			distance = distance + 1;
 			walk();
-			
+			if(wallTest()){
+				y = y - 1.5;
+				x = x - 1.5;
+			}
 		} else if (downPress && leftPress){
 			rotation = .75;
 			y = y + 1.5;
 			x = x - 1.5;
 			distance = distance + 1;
 			walk();
+			if(wallTest()){
+				y = y - 1.5;
+				x = x + 1.5;
+			}
 			
 		} else if (upPress && rightPress){
 			rotation = .75;
@@ -149,37 +156,54 @@ class Player extends Image{
 			x = x + 1.5;
 			distance = distance + 1;
 			walk();
-			
+			if(wallTest()){
+				y = y + 1.5;
+				x = x - 1.5;
+			}
 		} else if (upPress && leftPress){
 			rotation = 2.25;
 			y = y - 1.5;
 			x = x - 1.5;
 			distance = distance + 1;
 			walk();
-			
+			if(wallTest()){
+				y = y + 1.5;
+				x = x + 1.5;
+			}
 		} else if(leftPress) {
 			rotation = 1.5;
 			x = x - 2;
 			distance = distance + 1;
 			walk();
-			
+			if(wallTest()){
+				x = x + 2;
+			}
 		} else if (rightPress) {
 			rotation = 1.5;
 			x = x + 2;
 			distance = distance + 1;
 			walk();
+			if(wallTest()){
+				x = x - 2;
+			}
 			
 		} else if (upPress) {
 			rotation = 0;
 			y = y - 2;
 			distance = distance + 1;
 			walk();	
+			if(wallTest()){
+				y = y + 2;
+			}
 			
 		} else if (downPress){
 			rotation = 0;
 			y = y + 2;
 			distance = distance + 1;
 			walk();
+			if(wallTest()){
+				y = y - 2;
+			}
 		}
 	}
 	
@@ -198,6 +222,33 @@ class Player extends Image{
 			distance = 0;
 		}
 	}
-	
-	
+	public function wallTest():Bool{
+		var bounds1:Rectangle = new Rectangle(19,7,8, 704);
+		var bounds2:Rectangle = new Rectangle(19,703,730,8);
+		var bounds3:Rectangle = new Rectangle(19,7,644,8);
+		var bounds4:Rectangle = new Rectangle(655,7,8,216);
+		var bounds5:Rectangle = new Rectangle(655,223,207,8);
+		var bounds6:Rectangle = new Rectangle(854,223,8,218);
+		var bounds7:Rectangle = new Rectangle(750,433,112,8);
+		var bounds8:Rectangle = new Rectangle(750,433,8,278);
+		
+		var boundsArray = new Array();
+		
+		boundsArray.push(bounds1);
+		boundsArray.push(bounds2);
+		boundsArray.push(bounds3);
+		boundsArray.push(bounds4);
+		boundsArray.push(bounds5);
+		boundsArray.push(bounds6);
+		boundsArray.push(bounds7);
+		boundsArray.push(bounds8);
+		
+		var playerBounds:Rectangle = this.bounds;
+
+		for(i in boundsArray){
+			if(i.intersects(playerBounds))
+				return true;
+		}
+		return false;
+	}	
 }
