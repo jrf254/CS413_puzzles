@@ -50,8 +50,7 @@ class Main extends Sprite {
 		rootSprite.addChild(map2);
 		fl = new Floor();
 		rootSprite.addChild(fl);
-		player = new Player();
-		rootSprite.addChild(player);
+
 		inventory = new Image(Root.assets.getTexture("inventory"));
 		inventory.x = 770;
 		inventory.y = 600;
@@ -105,8 +104,11 @@ They say this is the sound track of Hell itself.");
 		rootSprite.addChild(polka);
 
 		mirror = new Items("mirror", 420, 15, false, "It's a Broken Mirror.
-'There is mirror shards everywhere. Lucky you don't have to worry about stepping on them. They are so reflective its easy to spot them.");
+There are mirror shards everywhere. Lucky you don't have to worry about stepping on them. They are so reflective its easy to spot them.");
 		rootSprite.addChild(mirror);
+
+		player = new Player();
+		rootSprite.addChild(player);
 
 		discoBall = new Items("discoball", 803, 638, false, "The ball that creates the funky vibes that 
 				drives Agent Gary straight to funky town.");
