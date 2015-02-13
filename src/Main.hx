@@ -36,6 +36,10 @@ class Main extends Sprite {
 	public static var tf:TextField;
 	public static var emptyT:Bool = true;
 	
+	var powerOn:Int;
+	var discoBallOn:Int;
+	var musicOn:Int = 1;
+	
 
 	public function new(rootSprite:Sprite) {
 		this.rootSprite = rootSprite;
@@ -181,6 +185,7 @@ There are mirror shards everywhere. Lucky you don't have to worry about stepping
 		rootSprite.removeChild(map);
 		map2.alpha = 1;
 		fl.begin();
+		powerOn = 1;
 	}
 
 	public function glueMel(){
@@ -211,10 +216,19 @@ There are mirror shards everywhere. Lucky you don't have to worry about stepping
 			((player.y - 448) < 30))) && discoBall.inPossession == true){
 			discoBall.x = 496;
 			discoBall.y = 448;
-			rootSprite.removeChild(glueMelon);      
+			rootSprite.removeChild(glueMelon);
+			discoBallOn = 1;
+			winCond();
 		}
 		else {
 			return;
+		}
+	}
+	
+	public function winCond(){
+		if (powerOn == 1 && discoBallOn == 1 && musicOn == 1){
+			var win:Image = new Image(Root.assets.getTexture("win"));
+			rootSprite.addChild(win);
 		}
 	}
 }
