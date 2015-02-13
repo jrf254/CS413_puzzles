@@ -1,37 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Created with TexturePacker http://www.codeandweb.com/texturepacker-->
-<!-- $TexturePacker:SmartUpdate:724f2a180645df9a18e2bcafd23e16fe:5287eaa331a16aee808e32e3671e42bc:59d0ea613393eb208d27221bb1a3709f$ -->
+<!-- $TexturePacker:SmartUpdate:6a40c58dbdd7b3e5a872a49e3f24a87c:13f34290e9351444d431db7920e66088:59d0ea613393eb208d27221bb1a3709f$ -->
 <TextureAtlas imagePath="spritesheet0.png">
     <SubTexture name="DiscoV6" x="2" y="2" width="877" height="724"/>
-    <SubTexture name="Discomap5" x="881" y="2" width="877" height="724"/>
-    <SubTexture name="PC3a" x="1414" y="1758" width="27" height="22" frameX="-3" frameY="-5" frameWidth="32" frameHeight="32"/>
-    <SubTexture name="PC3b" x="1443" y="1758" width="27" height="22" frameX="-3" frameY="-5" frameWidth="32" frameHeight="32"/>
-    <SubTexture name="PC3c" x="1472" y="1744" width="27" height="22" frameX="-3" frameY="-5" frameWidth="32" frameHeight="32"/>
-    <SubTexture name="PC3d" x="1472" y="1768" width="27" height="22" frameX="-3" frameY="-5" frameWidth="32" frameHeight="32"/>
-    <SubTexture name="PC3e" x="1492" y="1708" width="27" height="22" frameX="-3" frameY="-5" frameWidth="32" frameHeight="32"/>
-    <SubTexture name="bbutton1" x="1456" y="1656" width="100" height="50"/>
-    <SubTexture name="canOfGlue" x="1568" y="1454" width="27" height="16" frameX="-2" frameY="-8" frameWidth="32" frameHeight="32"/>
-    <SubTexture name="cbutton1" x="1501" y="1732" width="100" height="50"/>
-    <SubTexture name="credits1" x="1354" y="1454" width="200" height="200"/>
-    <SubTexture name="dancefloor" x="2" y="1454" width="336" height="336"/>
-    <SubTexture name="dancefloor2" x="340" y="1454" width="336" height="336"/>
-    <SubTexture name="dancefloor3" x="678" y="1454" width="336" height="336"/>
-    <SubTexture name="dancefloor4" x="1016" y="1454" width="336" height="336"/>
-    <SubTexture name="dancefloor5" x="1428" y="1782" width="1" height="1" frameX="0" frameY="0" frameWidth="336" frameHeight="336"/>
-    <SubTexture name="discoball" x="1456" y="1708" width="34" height="34"/>
-    <SubTexture name="funco" x="1521" y="1708" width="20" height="22" frameX="-6" frameY="-5" frameWidth="32" frameHeight="32"/>
-    <SubTexture name="ibutton1" x="1603" y="1454" width="100" height="50"/>
-    <SubTexture name="intro" x="2" y="728" width="877" height="724"/>
-    <SubTexture name="intro2" x="881" y="728" width="877" height="724"/>
-    <SubTexture name="inventory" x="1354" y="1656" width="100" height="100"/>
-    <SubTexture name="invis" x="1428" y="1782" width="1" height="1" frameX="0" frameY="0" frameWidth="32" frameHeight="32"/>
-    <SubTexture name="magazines" x="1568" y="1472" width="15" height="14" frameX="-7" frameY="-8" frameWidth="32" frameHeight="32"/>
-    <SubTexture name="melon" x="1354" y="1758" width="28" height="30" frameX="-2" frameY="-1" frameWidth="32" frameHeight="32"/>
-    <SubTexture name="melon2" x="1384" y="1758" width="28" height="30" frameX="-2" frameY="-1" frameWidth="32" frameHeight="32"/>
-    <SubTexture name="mirror" x="1543" y="1708" width="23" height="18"/>
-    <SubTexture name="pgbutton1" x="1603" y="1506" width="100" height="50"/>
-    <SubTexture name="phone" x="1585" y="1472" width="11" height="13" frameX="-11" frameY="-9" frameWidth="32" frameHeight="32"/>
-    <SubTexture name="polka" x="1456" y="1744" width="11" height="11" frameX="-10" frameY="-11" frameWidth="32" frameHeight="32"/>
-    <SubTexture name="pwrbutt1" x="1414" y="1782" width="12" height="3" frameX="-10" frameY="0" frameWidth="32" frameHeight="32"/>
-    <SubTexture name="pwrbutt2" x="1414" y="1787" width="12" height="2" frameX="-10" frameY="0" frameWidth="32" frameHeight="32"/>
+    <SubTexture name="Discomap5" x="2" y="728" rotated="true" width="724" height="877"/>
+    <SubTexture name="PC3a" x="830" y="760" width="27" height="22" frameX="-3" frameY="-5" frameWidth="32" frameHeight="32"/>
+    <SubTexture name="PC3b" x="794" y="830" width="27" height="22" frameX="-3" frameY="-5" frameWidth="32" frameHeight="32"/>
+    <SubTexture name="PC3c" x="830" y="784" width="27" height="22" frameX="-3" frameY="-5" frameWidth="32" frameHeight="32"/>
+    <SubTexture name="PC3d" x="830" y="808" width="27" height="22" frameX="-3" frameY="-5" frameWidth="32" frameHeight="32"/>
+    <SubTexture name="PC3e" x="823" y="832" width="27" height="22" frameX="-3" frameY="-5" frameWidth="32" frameHeight="32"/>
+    <SubTexture name="canOfGlue" x="860" y="728" rotated="true" width="16" height="27" frameX="-2" frameY="-8" frameWidth="32" frameHeight="32"/>
+    <SubTexture name="dancefloor5" x="860" y="757" width="1" height="1" frameX="0" frameY="0" frameWidth="336" frameHeight="336"/>
+    <SubTexture name="discoball" x="728" y="830" width="34" height="34"/>
+    <SubTexture name="funco" x="859" y="760" width="20" height="22" frameX="-6" frameY="-5" frameWidth="32" frameHeight="32"/>
+    <SubTexture name="intro" x="881" y="2" rotated="true" width="724" height="877"/>
+    <SubTexture name="intro2" x="728" y="881" width="877" height="724"/>
+    <SubTexture name="inventory" x="728" y="728" width="100" height="100"/>
+    <SubTexture name="invis" x="860" y="757" width="1" height="1" frameX="0" frameY="0" frameWidth="32" frameHeight="32"/>
+    <SubTexture name="magazines" x="859" y="809" width="15" height="14" frameX="-7" frameY="-8" frameWidth="32" frameHeight="32"/>
+    <SubTexture name="melon" x="830" y="728" width="28" height="30" frameX="-2" frameY="-1" frameWidth="32" frameHeight="32"/>
+    <SubTexture name="melon2" x="764" y="830" width="28" height="30" frameX="-2" frameY="-1" frameWidth="32" frameHeight="32"/>
+    <SubTexture name="mirror" x="859" y="784" rotated="true" width="18" height="23"/>
+    <SubTexture name="phone" x="728" y="866" width="11" height="13" frameX="-11" frameY="-9" frameWidth="32" frameHeight="32"/>
+    <SubTexture name="polka" x="741" y="866" width="11" height="11" frameX="-10" frameY="-11" frameWidth="32" frameHeight="32"/>
+    <SubTexture name="pwrbutt1" x="876" y="809" rotated="true" width="3" height="12" frameX="-10" frameY="0" frameWidth="32" frameHeight="32"/>
+    <SubTexture name="pwrbutt2" x="764" y="862" width="12" height="2" frameX="-10" frameY="0" frameWidth="32" frameHeight="32"/>
 </TextureAtlas>

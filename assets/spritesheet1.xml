@@ -1,7 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Created with TexturePacker http://www.codeandweb.com/texturepacker-->
-<!-- $TexturePacker:SmartUpdate:724f2a180645df9a18e2bcafd23e16fe:5287eaa331a16aee808e32e3671e42bc:59d0ea613393eb208d27221bb1a3709f$ -->
+<!-- $TexturePacker:SmartUpdate:6a40c58dbdd7b3e5a872a49e3f24a87c:13f34290e9351444d431db7920e66088:59d0ea613393eb208d27221bb1a3709f$ -->
 <TextureAtlas imagePath="spritesheet1.png">
+    <SubTexture name="bbutton1" x="1354" y="930" width="100" height="50"/>
+    <SubTexture name="cbutton1" x="1556" y="728" width="100" height="50"/>
+    <SubTexture name="credits1" x="1354" y="728" width="200" height="200"/>
+    <SubTexture name="dancefloor" x="2" y="728" width="336" height="336"/>
+    <SubTexture name="dancefloor2" x="340" y="728" width="336" height="336"/>
+    <SubTexture name="dancefloor3" x="678" y="728" width="336" height="336"/>
+    <SubTexture name="dancefloor4" x="1016" y="728" width="336" height="336"/>
+    <SubTexture name="ibutton1" x="1658" y="728" width="100" height="50"/>
     <SubTexture name="intro3" x="2" y="2" width="877" height="724"/>
     <SubTexture name="menu3" x="881" y="2" width="877" height="724"/>
+    <SubTexture name="next" x="1354" y="982" width="100" height="50"/>
+    <SubTexture name="pgbutton1" x="1456" y="930" rotated="true" width="50" height="100"/>
 </TextureAtlas>
