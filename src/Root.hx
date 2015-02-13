@@ -25,7 +25,8 @@ class Root extends Sprite {
 		
 		assets.enqueue("assets/spritesheet3.png");
 		assets.enqueue("assets/spritesheet3.xml");
-		assets.enqueue("assets/music/disco_1.mp3");
+        assets.enqueue("assets/club2.png");
+		assets.enqueue("assets/music/disco_3.mp3");
 		
         assets.loadQueue(function onProgress(ratio:Float) {
             haxe.Log.clear();
