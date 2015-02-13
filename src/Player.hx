@@ -28,8 +28,8 @@ class Player extends Image{
 	
 	public function new(){
 		super(pc1);
-		x = 130;//Starling.current.stage.stageWidth / 3.5;
-		y = Starling.current.stage.stageHeight / 3.5;
+		x = 60;//Starling.current.stage.stageWidth / 3.5;
+		y = 280;//Starling.current.stage.stageHeight / 3.5;
 		pivotX = this.texture.width / 2;
 		pivotY = this.texture.height / 2;
 		start();

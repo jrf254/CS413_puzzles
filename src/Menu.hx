@@ -38,23 +38,23 @@ class Menu extends Sprite{
 		rootSprite.addChild(menu);
 
 		playButton = new Image(Root.assets.getTexture("pgbutton"));
-		playButton.x = 400;
-        playButton.y = 500;
+		playButton.x = 200;
+        playButton.y = 400;
 		rootSprite.addChild(playButton);
 
 		iButton = new Image(Root.assets.getTexture("ibutton"));
-		iButton.x = 400;
-		iButton.y = 580;
+		iButton.x = 200;
+		iButton.y = 480;
 		rootSprite.addChild(iButton);
 
 		cButton = new Image(Root.assets.getTexture("cbutton"));
-		cButton.x = 400;
-		cButton.y = 660;
+		cButton.x = 200;
+		cButton.y = 560;
 		rootSprite.addChild(cButton);
 
 		backButton = new Image(Root.assets.getTexture("bbutton"));
-		backButton.x = 770;
-		backButton.y = 775;
+		backButton.x = 200;
+		backButton.y = 560;
 
 		credits = new Image(Root.assets.getTexture("credits"));
 		credits.x = 295;
