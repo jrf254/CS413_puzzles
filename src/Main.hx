@@ -20,6 +20,7 @@ class Main extends Sprite {
 	public var rootSprite:Sprite;
 	var map:Image;
 	var map2:Image;
+	var win:Image;
 	public var player:Player;
 	var butt:Items;
 	var glue:Items;
@@ -32,6 +33,9 @@ class Main extends Sprite {
 	var mirror:Items;
 	var glueMelon:Items;
 	var discoBall:Items;
+	var powerOn:Bool;
+	var ballPlaced:Bool;
+	var soundOn:Bool;
 	public static var tf:TextField;
 	public static var emptyT:Bool = true;
 	
@@ -110,6 +114,10 @@ They say this is the sound track of Hell itself.");
 				drives Agent Gary straight to funky town.");
 
 		glueMelon = new Items("melon2", 803, 638, false, "");
+
+		powerOn = false;
+		ballPlaced = false;
+		soundOn = false;
 		
 		//Event Listeners
 		Starling.current.stage.addEventListener(KeyboardEvent.KEY_DOWN, keyDown);
@@ -119,6 +127,7 @@ They say this is the sound track of Hell itself.");
 		Starling.current.stage.addEventListener("glue", glueMel);
 		Starling.current.stage.addEventListener("glass", addGlass);
 		Starling.current.stage.addEventListener("dPressed", placeBall);
+		Starling.current.stage.addEventListener("win", winCheck);
 	}
 	
 	public function keyDown(event:KeyboardEvent) {
@@ -176,6 +185,7 @@ They say this is the sound track of Hell itself.");
 		butt.interacted = true;
 		rootSprite.removeChild(map);
 		map2.alpha = 1;
+		powerOn = true;
 	}
 
 	public function glueMel(){
@@ -206,10 +216,18 @@ They say this is the sound track of Hell itself.");
 			((player.y - 448) < 30))) && discoBall.inPossession == true){
 			discoBall.x = 496;
 			discoBall.y = 448;
-			rootSprite.removeChild(glueMelon);      
+			rootSprite.removeChild(glueMelon);   
+			ballPlaced = true;   
 		}
 		else {
 			return;
+		}
+	}
+
+	public function winCheck() {
+		if((powerOn == true) && (ballPlaced == true) && (soundOn == true)){
+			win = new Image(Root.assets.getTexture("win"));
+			rootSprite.addChild(win);     
 		}
 	}
 }
