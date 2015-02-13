@@ -30,6 +30,8 @@ class Main extends Sprite {
 	var inventory:Image;
 	var polka:Items;
 	var mirror:Items;
+	var glueMelon:Items;
+	var discoBall:Items;
 	public static var tf:TextField;
 	public static var emptyT:Bool = true;
 	
@@ -107,7 +109,9 @@ They say this is the sound track of Hell itself.");
 		Starling.current.stage.addEventListener(KeyboardEvent.KEY_DOWN, keyDown);
 		Starling.current.stage.addEventListener("print",addstuff);
 		Starling.current.stage.addEventListener("wipe",eraseBoard);
-		Starling.current.stage.addEventListener("power", power);		
+		Starling.current.stage.addEventListener("power", power);	
+		Starling.current.stage.addEventListener("glue", glueMel);
+		Starling.current.stage.addEventListener("glass", addGlass);	
 	}
 	
 	public function keyDown(event:KeyboardEvent) {
@@ -165,5 +169,34 @@ They say this is the sound track of Hell itself.");
 		butt.interacted = true;
 		rootSprite.removeChild(map);
 		map2.alpha = 1;
+	}
+
+	public function glueMel(){
+		if(melon.inPossession == false){
+			return;
+		}
+		else {
+			glueMelon = new Items("melon2", 803, 638, false, "");
+			glueMelon.x = 803;
+			glueMelon.y = 638;
+			glueMelon.inPossession = true;
+			rootSprite.addChild(glueMelon);
+			rootSprite.removeChild(glue);
+			rootSprite.removeChild(melon);
+		}
+	}
+
+	public function addGlass(){
+		if(glueMelon.inPossession == false){
+		    return;  
+		}
+		else {
+			discoBall = new Items("discoball", 803, 638, false, "");
+			discoBall.x = 803;
+			discoBall.y = 638;
+			discoBall.inPossession = true;
+			rootSprite.addChild(discoBall);
+			rootSprite.removeChild(glueMelon);
+		}
 	}
 }

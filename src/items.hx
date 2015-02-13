@@ -19,11 +19,13 @@ class Items extends Image{
 	public var takeable:Bool;
 	public var interacted:Bool;
 	public var item:String;
+	public var inPossession:Bool;
 
 	public function new(texture_item:String, x_cord:Float, y_cord:Float, T:Bool, D:String){
 		description = D;
 		takeable = T;
 		interacted = false;
+		inPossession = false;
 		item = texture_item;
 		//trace(description);
 		super(Root.assets.getTexture(texture_item));
@@ -46,6 +48,12 @@ class Items extends Image{
 					texture = Root.assets.getTexture("pwrbutt2");
 					if(Main.emptyT == true) Starling.current.stage.dispatchEvent(new Event("power"));
 				}
+				if(item == "canOfGlue"){
+					if(Main.emptyT == true) Starling.current.stage.dispatchEvent(new Event("glue"));
+				}
+				if(item == "mirror"){
+				    if(Main.emptyT == true) Starling.current.stage.dispatchEvent(new Event("glass"));
+				}
 			}
 		}
 	}
@@ -55,8 +63,11 @@ class Items extends Image{
 		{
 
 			if(((((Player.xcor - x) > -30) && ((Player.xcor - x) < 30)) && (((Player.ycor - y) > -30) && ((Player.ycor - y) < 30)))){
-				x = 803;
-				y = 638;
+				if(item == "melon"){
+					inPossession = true;	
+					x = 803;
+					y = 638;
+				}
 			}
 		}
 	}
