@@ -54,6 +54,9 @@ class Items extends Image{
 				if(item == "mirror"){
 				    if(Main.emptyT == true) Starling.current.stage.dispatchEvent(new Event("glass"));
 				}
+				if(item == "funco"){
+				    if(Main.emptyT == true) Starling.current.stage.dispatchEvent(new Event("music"));
+				}
 			}
 		}
 	}

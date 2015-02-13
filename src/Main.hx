@@ -127,6 +127,7 @@ There are mirror shards everywhere. Lucky you don't have to worry about stepping
 		Starling.current.stage.addEventListener("glue", glueMel);
 		Starling.current.stage.addEventListener("glass", addGlass);
 		Starling.current.stage.addEventListener("dPressed", placeBall);
+		Starling.current.stage.addEventListener("music", playMusic);
 	}
 	
 	public function keyDown(event:KeyboardEvent) {
@@ -223,6 +224,14 @@ There are mirror shards everywhere. Lucky you don't have to worry about stepping
 		else {
 			return;
 		}
+	}
+	
+	public function playMusic(){
+		funco.interacted = true;
+		trace("boners");
+		Root.assets.playSound("disco_3", 0, 1000);
+		musicOn = 1;
+		winCond();
 	}
 	
 	public function winCond(){
