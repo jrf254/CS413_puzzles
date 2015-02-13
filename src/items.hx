@@ -24,7 +24,15 @@ class Items extends Image{
 		x = x_cord;
 		y = y_cord;
 		Starling.current.stage.addEventListener("aPressed",desc);
+		Starling.current.stage.addEventListener("sPressed", take);
 		//this.addEventListener(EnterFrameEvent.ENTER_FRAME, enterFrame);
+	}
+
+	public function take(){
+		if(((((Player.xcor - x) > -30) && ((Player.xcor - x) < 30)) && (((Player.ycor - y) > -30) && ((Player.ycor - y) < 30)))){
+			x = 1100;
+			y = 300;
+		}
 	}
 
 	public function desc()
