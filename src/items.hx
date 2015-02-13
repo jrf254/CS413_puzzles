@@ -19,7 +19,7 @@ class Items extends Image{
 
 	public function new(texture_item:String, x_cord:Float, y_cord:Float, D:String){
 		description = D;
-		trace(description);
+		//trace(description);
 		super(Root.assets.getTexture(texture_item));
 		x = x_cord;
 		y = y_cord;
@@ -40,7 +40,7 @@ class Items extends Image{
 			{
 				//This places the items description on  the screen.
 				Main.textWindow(description);
-				Starling.current.stage.dispatchEvent(new Event("print"));
+				if(Main.emptyT == true) Starling.current.stage.dispatchEvent(new Event("print"));
 			}
 	}
 	

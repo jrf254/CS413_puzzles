@@ -28,8 +28,8 @@ class Player extends Image{
 	
 	public function new(){
 		super(pc1);
-		x = Starling.current.stage.stageWidth / 2;
-		y = Starling.current.stage.stageHeight / 2;
+		x = 130;//Starling.current.stage.stageWidth / 3.5;
+		y = Starling.current.stage.stageHeight / 3.5;
 		pivotX = this.texture.width / 2;
 		pivotY = this.texture.height / 2;
 		start();
@@ -45,15 +45,19 @@ class Player extends Image{
 		
 		if (event.keyCode == Keyboard.LEFT) {
 			leftPress = true;
+						Starling.current.stage.dispatchEvent(new Event("wipe"));
 		}
 		if (event.keyCode == Keyboard.RIGHT) {
 			rightPress = true;
+						Starling.current.stage.dispatchEvent(new Event("wipe"));
 		}
 		if (event.keyCode == Keyboard.UP){
-			upPress = true;								
+			upPress = true;	
+						Starling.current.stage.dispatchEvent(new Event("wipe"));							
 		}
 		if (event.keyCode == Keyboard.DOWN) {
 			downPress = true;
+						Starling.current.stage.dispatchEvent(new Event("wipe"));
 		}
 
 	}
@@ -74,22 +78,22 @@ class Player extends Image{
 			//trace(KeyboardEvent.KEY_UP);
 			leftPress = false;
 			distance = 0;
-			Starling.current.stage.dispatchEvent(new Event("wipe"));
+
 		}
 		if (event.keyCode == Keyboard.RIGHT){
 			rightPress = false;
 			distance = 0;
-			Starling.current.stage.dispatchEvent(new Event("wipe"));
+
 		}
 		if (event.keyCode == Keyboard.UP){
 			upPress = false;
 			distance = 0;
-			Starling.current.stage.dispatchEvent(new Event("wipe"));
+
 		}
 		if (event.keyCode == Keyboard.DOWN) {
 			downPress = false;
 			distance = 0;
-			Starling.current.stage.dispatchEvent(new Event("wipe"));
+
 		}
 		if (event.keyCode == Keyboard.A)
 		{
@@ -98,7 +102,7 @@ class Player extends Image{
 			// moveing will delete the desc from the screen
 			xcor = x;
 			ycor = y;
-			Starling.current.stage.dispatchEvent(new Event("aPressed"));	
+			if(Main.emptyT == true)Starling.current.stage.dispatchEvent(new Event("aPressed"));	
 
 		}
 
