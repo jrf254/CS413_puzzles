@@ -16,9 +16,11 @@ import starling.events.Event;
 class Items extends Image{
 
 	public var description:String;
+	public var takeable:Bool;
 
-	public function new(texture_item:String, x_cord:Float, y_cord:Float, D:String){
+	public function new(texture_item:String, x_cord:Float, y_cord:Float, T:Bool, D:String){
 		description = D;
+		takeable = T;
 		//trace(description);
 		super(Root.assets.getTexture(texture_item));
 		x = x_cord;
@@ -29,9 +31,13 @@ class Items extends Image{
 	}
 
 	public function take(){
-		if(((((Player.xcor - x) > -30) && ((Player.xcor - x) < 30)) && (((Player.ycor - y) > -30) && ((Player.ycor - y) < 30)))){
-			x = 1100;
-			y = 300;
+		if(takeable == true)
+		{
+
+			if(((((Player.xcor - x) > -30) && ((Player.xcor - x) < 30)) && (((Player.ycor - y) > -30) && ((Player.ycor - y) < 30)))){
+				x = 1100;
+				y = 300;
+			}
 		}
 	}
 
