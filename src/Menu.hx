@@ -32,33 +32,33 @@ class Menu extends Sprite{
 	}
 
 	public function mainMenu(){
-		menu = new Image(Root.assets.getTexture("menu2"));	
+		menu = new Image(Root.assets.getTexture("menu3"));	
 		menu.width = flash.Lib.current.stage.stageWidth;
         menu.height = flash.Lib.current.stage.stageHeight;
 		rootSprite.addChild(menu);
 
-		playButton = new Image(Root.assets.getTexture("pgbutton"));
+		playButton = new Image(Root.assets.getTexture("pgbutton1"));
 		playButton.x = 200;
         playButton.y = 400;
 		rootSprite.addChild(playButton);
 
-		iButton = new Image(Root.assets.getTexture("ibutton"));
+		iButton = new Image(Root.assets.getTexture("ibutton1"));
 		iButton.x = 200;
 		iButton.y = 480;
 		rootSprite.addChild(iButton);
 
-		cButton = new Image(Root.assets.getTexture("cbutton"));
+		cButton = new Image(Root.assets.getTexture("cbutton1"));
 		cButton.x = 200;
 		cButton.y = 560;
 		rootSprite.addChild(cButton);
 
-		backButton = new Image(Root.assets.getTexture("bbutton"));
+		backButton = new Image(Root.assets.getTexture("bbutton1"));
 		backButton.x = 200;
 		backButton.y = 560;
 
-		credits = new Image(Root.assets.getTexture("credits"));
-		credits.x = 295;
-		credits.y = 200;
+		credits = new Image(Root.assets.getTexture("credits1"));
+		credits.x = 340;
+		credits.y = 300;
 
 
 
@@ -85,8 +85,8 @@ class Menu extends Sprite{
                 	rootSprite.removeChild(cButton);
                 	rootSprite.removeChild(playButton);
                 	rootSprite.addChild(backButton);
-        			iButton.x = 400;
-        			iButton.y = 50;
+        			iButton.x = 380;
+        			iButton.y = 100;
         }}); 
 
         cButton.addEventListener(TouchEvent.TOUCH, function(e:TouchEvent){
@@ -96,8 +96,8 @@ class Menu extends Sprite{
                 	rootSprite.removeChild(playButton);
                 	rootSprite.addChild(backButton);
                 	rootSprite.addChild(credits);
-        			cButton.x = 400;
-        			cButton.y = 50;
+        			cButton.x = 380;
+        			cButton.y = 100;
         }});  
 
         backButton.addEventListener(TouchEvent.TOUCH, function(e:TouchEvent){
@@ -107,14 +107,14 @@ class Menu extends Sprite{
                	rootSprite.removeChild(iButton);
                 rootSprite.removeChild(playButton);
 				rootSprite.removeChild(cButton);
-				playButton.x = 400;
-        		playButton.y = 500;
+				playButton.x = 200;
+        		playButton.y = 400;
 				rootSprite.addChild(playButton);
-				iButton.x = 400;
-				iButton.y = 580;
+				iButton.x = 200;
+				iButton.y = 480;
 				rootSprite.addChild(iButton);
-				cButton.x = 400;
-				cButton.y = 660;
+				cButton.x = 200;
+				cButton.y = 560;
 				rootSprite.addChild(cButton);
         }});           	
 

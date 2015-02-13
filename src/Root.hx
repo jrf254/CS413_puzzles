@@ -23,8 +23,8 @@ class Root extends Sprite {
 
         assets = new AssetManager();
 		
-		assets.enqueue("assets/spritesheet2.png");
-		assets.enqueue("assets/spritesheet2.xml");
+		assets.enqueue("assets/spritesheet3.png");
+		assets.enqueue("assets/spritesheet3.xml");
         assets.enqueue("assets/pwrbutt2.png");
         assets.enqueue("assets/club2.png");
         assets.enqueue("assets/melon2.png");
