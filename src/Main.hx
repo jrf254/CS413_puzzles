@@ -104,6 +104,11 @@ They say this is the sound track of Hell itself.");
 		mirror = new Items("mirror", 420, 15, false, "It's a Broken Mirror.
 'There is mirror shards everywhere. Lucky you don't have to worry about stepping on them. They are so reflective its easy to spot them.");
 		rootSprite.addChild(mirror);
+
+		discoBall = new Items("discoball", 803, 638, false, "The ball that creates the funky vibes that 
+				drives Agent Gary straight to funky town.");
+
+		glueMelon = new Items("melon2", 803, 638, false, "");
 		
 		//Event Listeners
 		Starling.current.stage.addEventListener(KeyboardEvent.KEY_DOWN, keyDown);
@@ -177,9 +182,6 @@ They say this is the sound track of Hell itself.");
 			return;
 		}
 		else {
-			glueMelon = new Items("melon2", 803, 638, false, "");
-			glueMelon.x = 803;
-			glueMelon.y = 638;
 			glueMelon.inPossession = true;
 			rootSprite.addChild(glueMelon);
 			rootSprite.removeChild(glue);
@@ -192,10 +194,6 @@ They say this is the sound track of Hell itself.");
 		    return;  
 		}
 		else {
-			discoBall = new Items("discoball", 803, 638, false, "The ball that creates the funky vibes that 
-				drives Agent Gary straight to funky town.");
-			discoBall.x = 803;
-			discoBall.y = 638;
 			discoBall.inPossession = true;
 			rootSprite.addChild(discoBall);
 			rootSprite.removeChild(glueMelon);
