@@ -113,7 +113,7 @@ They say this is the sound track of Hell itself.");
 There are mirror shards everywhere. Lucky you don't have to worry about stepping on them. They are so reflective its easy to spot them.");
 		rootSprite.addChild(mirror);
 
-		recordPlayer = new Items("invis", 770, 368, false, "It's a Record Player.
+		recordPlayer = new Items("invis", 785, 370, false, "It's a Record Player.
 Now if you just had an appropriate Record to play.");
 		rootSprite.addChild(recordPlayer);
 
@@ -246,7 +246,7 @@ drives Agent Gary straight to funky town.");
 			return;
 		}
 		else {
-			textWindow("You place the Polka Disk in the Funk O Matic. The Machines roars into action and soon spits out a Disk of Disco's Greatest Hits.");
+			textWindow("You place the Polka Disk in the Funk O Matic. The Machines roars into action and soon spits out a Disk of Disco's Greatest Hits. Does it just spit this out no matter what you put in?");
 			addstuff();
 			discodisk.inPossession = true;
 			rootSprite.addChild(discodisk);
@@ -264,6 +264,8 @@ drives Agent Gary straight to funky town.");
 		funco.interacted = true;
 		Root.assets.playSound("disco_3", 0, 1000);
 		musicOn = 1;
+		discodisk.inPossession == false;
+		rootSprite.removeChild(discodisk);
 		winCond();
 		}
 	}
