@@ -33,6 +33,8 @@ class Main extends Sprite {
 	var glueMelon:Items;
 	var discoBall:Items;
 	var fl:Floor;
+	var discodisk:Items;
+	var recordPlayer:Items;
 	public static var tf:TextField;
 	public static var emptyT:Bool = true;
 	
@@ -103,7 +105,7 @@ Probably could turn it on if you wanted to.");
 One of the covers reads 'Elvis LIVES!' Did he ever really die?.");
 		rootSprite.addChild(mag);
 
-		polka = new Items("polka", 815, 280, false, "It's a Polka Record.
+		polka = new Items("polka", 815, 280, true, "It's a Polka Record.
 They say this is the sound track of Hell itself.");
 		rootSprite.addChild(polka);
 
@@ -111,13 +113,19 @@ They say this is the sound track of Hell itself.");
 There are mirror shards everywhere. Lucky you don't have to worry about stepping on them. They are so reflective its easy to spot them.");
 		rootSprite.addChild(mirror);
 
+		recordPlayer = new Items("invis", 770, 368, false, "It's a Record Player.
+Now if you just had an appropriate Record to play.");
+		rootSprite.addChild(recordPlayer);
+
 		player = new Player();
 		rootSprite.addChild(player);
 
 		discoBall = new Items("discoball", 803, 638, false, "The ball that creates the funky vibes that 
-				drives Agent Gary straight to funky town.");
+drives Agent Gary straight to funky town.");
 
 		glueMelon = new Items("melon2", 803, 638, false, "");
+
+		discodisk = new Items("polka", 803, 638, false, "");
 		
 		//Event Listeners
 		Starling.current.stage.addEventListener(KeyboardEvent.KEY_DOWN, keyDown);
@@ -128,6 +136,7 @@ There are mirror shards everywhere. Lucky you don't have to worry about stepping
 		Starling.current.stage.addEventListener("glass", addGlass);
 		Starling.current.stage.addEventListener("dPressed", placeBall);
 		Starling.current.stage.addEventListener("music", playMusic);
+		Starling.current.stage.addEventListener("disco", funkMe);
 	}
 	
 	public function keyDown(event:KeyboardEvent) {
@@ -194,6 +203,8 @@ There are mirror shards everywhere. Lucky you don't have to worry about stepping
 			return;
 		}
 		else {
+			textWindow("You cover the melon in a ton of glue, using the whole can.");
+			addstuff();
 			glueMelon.inPossession = true;
 			rootSprite.addChild(glueMelon);
 			rootSprite.removeChild(glue);
@@ -206,6 +217,8 @@ There are mirror shards everywhere. Lucky you don't have to worry about stepping
 		    return;  
 		}
 		else {
+			textWindow("You roll the mellon in the broken mirror peices. Giving you a perfect Disco ball.");
+			addstuff();
 			discoBall.inPossession = true;
 			rootSprite.addChild(discoBall);
 			rootSprite.removeChild(glueMelon);
@@ -225,12 +238,34 @@ There are mirror shards everywhere. Lucky you don't have to worry about stepping
 			return;
 		}
 	}
+
+
+
+	public function funkMe(){
+		if(polka.inPossession == false){
+			return;
+		}
+		else {
+			textWindow("You place the Polka Disk in the Funk O Matic. The Machines roars into action and soon spits out a Disk of Disco's Greatest Hits.");
+			addstuff();
+			discodisk.inPossession = true;
+			rootSprite.addChild(discodisk);
+			rootSprite.removeChild(polka);
+		}
+	}
+
 	
 	public function playMusic(){
+		if(discodisk.inPossession == false){
+		}
+		else{
+		textWindow("You place the Disco Disk in the Record Player. and are presented with the grooviest of beats.");
+		addstuff();
 		funco.interacted = true;
 		Root.assets.playSound("disco_3", 0, 1000);
 		musicOn = 1;
 		winCond();
+		}
 	}
 	
 	public function winCond(){

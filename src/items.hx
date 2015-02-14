@@ -55,6 +55,9 @@ class Items extends Image{
 				    if(Main.emptyT == true) Starling.current.stage.dispatchEvent(new Event("glass"));
 				}
 				if(item == "funco"){
+				    if(Main.emptyT == true) Starling.current.stage.dispatchEvent(new Event("disco"));
+				}
+				if(item == "invis"){
 				    if(Main.emptyT == true) Starling.current.stage.dispatchEvent(new Event("music"));
 				}
 			}
@@ -66,11 +69,11 @@ class Items extends Image{
 		{
 
 			if(((((Player.xcor - x) > -30) && ((Player.xcor - x) < 30)) && (((Player.ycor - y) > -30) && ((Player.ycor - y) < 30)))){
-				if(item == "melon"){
+				//if(item == "melon"){
 					inPossession = true;	
 					x = 803;
 					y = 638;
-				}
+				//}
 			}
 		}
 	}
